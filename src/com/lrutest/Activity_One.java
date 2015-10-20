@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 /**
- * http://blog.csdn.net/guolin_blog/article/details/9316683
+ * http://blog.csdn.net/guolin_blog/article/details/9316683<br/> 根据输入的宽高进行缩放图片
  * 
  * @author admin
  * 
@@ -29,6 +29,7 @@ public class Activity_One extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_one);
+		// 应用最大可用内存
 		int maxMemory = (int) (Runtime.getRuntime().maxMemory() / (1024 * 1024));
 		img = (ImageView) findViewById(R.id.img_cover);
 		tv_width = (EditText) findViewById(R.id.tv_width);

@@ -43,6 +43,7 @@ public class Activity_DiskLruCache extends Activity {
 
 		mPhotoWall.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
 
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onGlobalLayout() {
 				/**
