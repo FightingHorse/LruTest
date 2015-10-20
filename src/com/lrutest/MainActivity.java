@@ -1,5 +1,7 @@
 package com.lrutest;
 
+import com.lrutest.disklru.Activity_DiskLruCache;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +17,7 @@ import android.widget.Button;
  */
 public class MainActivity extends Activity implements OnClickListener {
 
-	private Button btn_activity_one, btn_lru, btn_photo_wall;
+	private Button btn_activity_one, btn_lru, btn_photo_wall, btn_disklru;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +26,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		btn_activity_one = (Button) findViewById(R.id.btn_activity_one);
 		btn_lru = (Button) findViewById(R.id.btn_lru);
 		btn_photo_wall = (Button) findViewById(R.id.btn_photo_wall);
+		btn_disklru = (Button) findViewById(R.id.btn_disklru);
 		btn_lru.setOnClickListener(this);
 		btn_activity_one.setOnClickListener(this);
 		btn_photo_wall.setOnClickListener(this);
+		btn_disklru.setOnClickListener(this);
 	}
 
 	@Override
@@ -42,6 +46,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.btn_photo_wall:// 使用Lru的单个加载
 			intent.setClass(this, Activity_Photo_Wall.class);
+			break;
+		case R.id.btn_disklru:
+			intent.setClass(this, Activity_DiskLruCache.class);
 			break;
 		default:
 			break;
